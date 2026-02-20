@@ -1,0 +1,244 @@
+/* ------------------------------
+   PALETA DE COLORES
+------------------------------ */
+:root {
+  --morado-oscuro: #1a0f24;
+  --morado: #3a1f5d;
+  --fucsia: #ff2aad;
+  --calipso: #00eaff;
+  --blanco: #ffffff;
+  --gris-claro: #dcdcdc;
+}
+
+/* ------------------------------
+   RESETEO
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: var(--morado-oscuro);
+  color: var(--blanco);
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   CONTENEDORES
+------------------------------ */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: var(--fucsia);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.header {
+  background: var(--morado);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--calipso);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--calipso);
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.logo-small {
+  width: 60px;
+  height: auto;
+}
+
+/* ------------------------------
+   HERO
+------------------------------ */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a0f24, #3a1f5d);
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: var(--calipso);
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--gris-claro);
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* ------------------------------
+   BOTONES
+------------------------------ */
+.btn-primary,
+.btn-secondary {
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--calipso);
+  color: var(--morado-oscuro);
+}
+
+.btn-primary:hover {
+  background: var(--fucsia);
+  color: var(--blanco);
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid var(--calipso);
+  color: var(--calipso);
+}
+
+.btn-secondary:hover {
+  background: var(--fucsia);
+  border-color: var(--fucsia);
+  color: var(--blanco);
+}
+
+/* ------------------------------
+   GRID
+------------------------------ */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ------------------------------
+   CARDS
+------------------------------ */
+.card {
+  background: #241331;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid var(--calipso);
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+}
+
+.card h3,
+.card h4 {
+  color: var(--fucsia);
+  margin-bottom: 15px;
+}
+
+/* ------------------------------
+   CHECKLIST
+------------------------------ */
+.checklist {
+  list-style: none;
+}
+
+.checklist li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.checklist li::before {
+  content: "✔";
+  color: var(--calipso);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* ------------------------------
+   IMÁGENES
+------------------------------ */
+.profile-img,
+.img-rounded {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid var(--calipso);
+}
+
+/* ------------------------------
+   CONTACTO
+------------------------------ */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.location,
+.phone {
+  margin-top: 10px;
+  color: var(--gris-claro);
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--morado);
+  border-top: 2px solid var(--calipso);
+  color: var(--gris-claro);
+}
+
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
+@media (max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
+
